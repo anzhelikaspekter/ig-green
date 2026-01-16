@@ -1,0 +1,20 @@
+:root {
+    --tooltip-primary-bg-color: #d0dcc6;
+    --tooltip-primary-color: #2d5551;
+}
+
+@mixin tooltip {
+    width: 100%;
+    max-width: 300px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    background-color: var(--tooltip-primary-bg-color);
+    color: var(--tooltip-primary-color);
+    font-weight: 600;
+}

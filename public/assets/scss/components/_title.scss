@@ -1,0 +1,63 @@
+:root {
+    --main-title-color: #232723;
+    --section-title-color: #232723;
+    --card-title-color: #232723;
+    --text-title-color: #232723;
+    --subtitle-color: #232723;
+}
+
+@mixin title-main {
+    font-size: calc(32px + (114 - 32) * ((100vw - 320px) / (1920 - 320)));
+    color: var(--main-title-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    @media screen and (min-width: 1638px) and (max-width: 1919.98px) {
+        font-size: calc(32px + (104 - 32) * ((100vw - 320px) / (1920 - 320)));
+    }
+    @media screen and (min-width: 1480px) and (max-width: 1637.98px) {
+        font-size: calc(32px + (92 - 32) * ((100vw - 320px) / (1920 - 320)));
+    }
+    @media screen and (min-width: 1290px) and (max-width: 1479.98px) {
+        font-size: calc(32px + (72 - 32) * ((100vw - 320px) / (1920 - 320)));
+    }
+    @media screen and (min-width: 992px) and (max-width: 1289.98px) {
+        font-size: calc(32px + (142 - 32) * ((100vw - 320px) / (1920 - 320)));
+    }
+    @media screen and (min-width: 768px) and (max-width: 991.98px) {
+        font-size: calc(32px + (164 - 32) * ((100vw - 320px) / (1920 - 320)));
+    }
+    @media screen and (max-width: 767.98px) {
+        font-size: calc(32px + (164 - 32) * ((100vw - 320px) / (1920 - 320)));
+    }
+    @media screen and (max-width: 564.98px) {
+        font-size: calc(32px + (224 - 32) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+
+@mixin title-section {
+    font-size: calc(24px + (54 - 24) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 500;
+    color: var(--section-title-color);
+    text-transform: capitalize;
+}
+
+@mixin title-card {
+    font-weight: 500;
+    font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1440 - 320)));
+    text-transform: capitalize;
+    color: var(--card-title-color);
+}
+
+@mixin title-text {
+    font-weight: 500;
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1440 - 320)));
+    text-transform: uppercase;
+    color: var(--text-title-color);
+}
+
+@mixin subtitle {
+    font-size: calc(18px + (42 - 18) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 500;
+    color: var(--subtitle-color);
+    text-transform: uppercase;
+}

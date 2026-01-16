@@ -1,0 +1,25 @@
+:root {
+    --desc-primary-color: #6F755F;
+    --desc-secondary-color: #232723;
+    --desc-copyright-color: #9BA18F;
+}
+
+@mixin desc-primary {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+    color: var(--desc-primary-color);
+    font-family: var(--font-secondary);
+    font-weight: 400;
+}
+
+@mixin desc-secondary {
+    font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1440 - 320)));
+    color: var(--desc-secondary-color);
+    font-family: var(--font-secondary);
+    font-weight: 400;
+}
+
+@mixin desc-copyright {
+    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)));
+    color: var(--desc-copyright-color);
+    font-family: var(--font-secondary);
+}

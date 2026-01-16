@@ -1,0 +1,82 @@
+:root {
+    --bg-color: #e2ebd3;
+    --font-primary: "Geist", sans-serif;
+    --font-secondary: "Raleway", sans-serif;
+}
+
+@import "_outline";
+@import "_scrollbar";
+@import "_sections";
+
+@import "components/_logo";
+@import "components/_btn";
+@import "components/_link";
+@import "components/_title";
+@import "components/_desc";
+@import "components/_icon";
+@import "components/_tooltip";
+@import "components/_social";
+@import "components/_list";
+@import "components/_figure";
+
+@import "sections/_header";
+@import "sections/_promo";
+@import "sections/_tricker";
+@import "sections/_mission";
+@import "sections/_about";
+@import "sections/_priority";
+@import "sections/_priorities";
+@import "sections/_footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+    font-family: var(--font-primary);
+    line-height: 1.2;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    position: relative;
+    & > .btn-drop-up {
+        @media screen and (min-width: 1080px) {
+            display: none;
+        }
+        @media screen and (max-width: 1079.98px) {
+            position: fixed;
+            right: 20px;
+            bottom: 50px;
+            z-index: 99;
+        }
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hide {
+    display: none !important;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}

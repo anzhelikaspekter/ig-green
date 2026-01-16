@@ -1,0 +1,167 @@
+:root {
+    --btn-menu-bg-color: #d5dec7;
+    --btn-menu-color: #272523;
+
+    --btn-secondary-bg-color: #272523;
+    --btn-secondary-color: #ffffff;
+    --btn-secondary-shadow-color: rgba(0, 0, 0, 0.1);
+    --btn-secondary-hover-bg-color: #2d5551;
+    --btn-secondary-hover-color: #b9ff78;
+    --btn-secondary-hover-border-color: #2d5551;
+    --btn-secondary-hover-shadow-color: rgba(45, 85, 81, 0.3);
+    --btn-secondary-active-bg-color: #2d5551;
+    --btn-secondary-active-shadow-color: rgba(0, 0, 0, 0.2);
+    --btn-secondary-focus-color: #ffffff;
+    --btn-secondary-focus-shadow-color: rgba(45, 85, 81, 0.5);
+
+    --btn-drop-up-bg-color: #494E46;
+
+    --btn-social-bg-color: transparent;
+    --btn-social-border-color: transparent;
+    --btn-social-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+@mixin btn-menu {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: var(--btn-menu-bg-color);
+    cursor: pointer;
+
+    svg {
+        width: 50px;
+        height: 50px;
+        stroke: var(--btn-menu-color);
+        stroke-width: 2px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        display: block;
+        position: absolute;
+
+        path {
+            transition: stroke-dasharray 0.85s ease 0s, stroke-dashoffset 0.85s ease 0s;
+            stroke-dasharray: 26px 100px;
+            stroke-dashoffset: 126px;
+            transform: translateZ(0);
+
+            &:nth-child(2) {
+                transition-duration: 0.7s;
+                transition-timing-function: ease-in;
+                stroke-dashoffset: 100px;
+                stroke-dasharray: 26px 74px;
+            }
+
+            &:nth-child(3) {
+                stroke-dashoffset: 133px;
+                stroke-dasharray: 26px 107px;
+            }
+        }
+    }
+
+    &.active {
+        svg {
+            path {
+                stroke-dashoffset: 57px;
+
+                &:nth-child(1),
+                &:nth-child(3) {
+                    transition-delay: 0.15s;
+                    transition-timing-function: cubic-bezier(0.2, 0.4, 0.2, 1.1);
+                }
+
+                &:nth-child(2) {
+                    transition-duration: 0.4s;
+                    stroke-dashoffset: 2px;
+                    stroke-dasharray: 1px 100px;
+                }
+
+                &:nth-child(3) {
+                    stroke-dashoffset: 58px;
+                }
+            }
+        }
+    }
+}
+
+.btn-menu {
+    @include btn-menu();
+}
+
+@mixin btn {
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 0;
+    border: 1px solid transparent;
+    background-color: transaprent;
+    box-shadow: 0 4px 6px transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin btn-secondary {
+    @include btn;
+
+    padding: 14px 16px;
+    border-radius: 10px;
+    background-color: var(--btn-secondary-bg-color);
+    color: var(--btn-secondary-color);
+    box-shadow: 0 4px 6px var(--btn-secondary-shadow-color);
+}
+
+.btn-secondary {
+    @include btn-secondary();
+}
+
+@mixin btn-social {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background-color: var(--btn-social-bg-color);
+    box-shadow: 0 4px 6px var(--btn-social-shadow-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.btn-social {
+    @include btn-social();
+}
+
+@mixin btn-drop-up {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--btn-drop-up-bg-color);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-drop-up {
+    @include btn-drop-up();
+}

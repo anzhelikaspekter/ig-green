@@ -1,0 +1,26 @@
+{
+    "name": "IG Green — Sustainable Energy Investments & Green Innovation",
+    "short_name": "IG Green",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#E2EBD3",
+    "theme_color": "#E2EBD3",
+    "description": "IG Green is an investment platform supporting sustainable energy solutions, including solar and wind power, electric vehicles, and green infrastructure. Driving innovation for a cleaner future.",
+    "icons": [
+        {
+            "src": "assets/img/favicons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/favicons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/favicons/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}

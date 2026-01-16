@@ -1,0 +1,83 @@
+.section {
+    &.header {
+        padding: 20px 120px;
+        @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+            padding: 20px;
+        }
+        @media screen and (max-width: 767.98px) {
+            padding: 20px;
+        }
+    }
+    &.promo {
+        padding: 80px 120px;
+        @media screen and (min-width: 992px) and (max-width: 1279.98px) {
+            padding: 50px 20px 20px;
+        }
+        @media screen and (max-width: 991.98px) {
+            padding: 30px 20px 20px;
+        }
+        @media screen and (max-width: 467.98px) {
+            padding: 30px 20px 0;
+        }
+    }
+    &.tricker {
+        padding: 20px 120px;
+        @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+            padding: 20px;
+        }
+        @media screen and (max-width: 767.98px) {
+            padding: 20px;
+        }
+    }
+    &.mission {
+        padding: 80px 120px;
+        @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+            padding: 50px 20px;
+        }
+        @media screen and (max-width: 767.98px) {
+            padding: 30px 20px;
+        }
+    }
+    &.about {
+        padding: 80px 120px;
+        @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+            padding: 50px 20px;
+        }
+        @media screen and (max-width: 767.98px) {
+            padding: 30px 20px;
+        }
+    }
+    &.priority {
+        padding: 80px 120px;
+        @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+            padding: 50px 20px;
+        }
+        @media screen and (max-width: 767.98px) {
+            padding: 30px 20px;
+        }
+    }
+    &.priorities {
+        padding: 80px 120px;
+        @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+            padding: 50px 20px;
+        }
+        @media screen and (max-width: 767.98px) {
+            padding: 30px 20px;
+        }
+    }
+    &.footer {
+        padding: 40px 240px 20px;
+        @media screen and (min-width: 992px) and (max-width: 1279.98px) {
+            padding: 40px 120px 20px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 991.98px) {
+            padding: 30px 120px 20px;
+        }
+        @media screen and (max-width: 767.98px) {
+            padding: 30px 80px 20px;
+        }
+        @media screen and (max-width: 467.98px) {
+            padding: 30px 50px 20px;
+        }
+    }
+}

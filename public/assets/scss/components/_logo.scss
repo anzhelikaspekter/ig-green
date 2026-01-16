@@ -1,0 +1,50 @@
+@mixin logo {
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    max-height: 50px;
+    display: block;
+}
+
+@mixin logo-header {
+    @include logo();
+}
+
+.logo-header {
+    @include logo-header();
+}
+
+@mixin logo-footer {
+    @include logo();
+}
+
+.logo-footer {
+    @include logo-footer();
+}
+
+@mixin logo-tricker {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: grayscale(1);
+}
+
+.logo-tricker {
+    @include logo-tricker();
+    &.sdg {
+        background: url(../img/logo_1.webp) no-repeat 50% 50% / contain;
+    }
+    &.sasb {
+        background: url(../img/logo_2.webp) no-repeat 50% 50% / contain;
+    }
+    &.tcfd {
+        background: url(../img/logo_3.webp) no-repeat 50% 50% / contain;
+    }
+    &.gri {
+        background: url(../img/logo_4.webp) no-repeat 50% 50% / contain;
+    }
+    &.ggp {
+        background: url(../img/logo_5.webp) no-repeat 50% 50% / contain;
+    }
+}

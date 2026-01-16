@@ -1,0 +1,23 @@
+:root {
+    --figure-bg-color: #dfe8d0;
+    --figure-border-color: #cfd7c1;
+    --figure-logo-border-frst-color: #c2af20;
+    --figure-logo-border-scnd-color: rgba(168, 168, 168, 0.3);
+    --line-length: 60px;
+    --line-thickness: 1px;
+}
+
+.figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: var(--figure-bg-color);
+    border: 1px solid var(--figure-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__img {
+        width: 75%;
+        aspect-ratio: 1 / 1;
+    }
+}

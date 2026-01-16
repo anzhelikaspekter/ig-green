@@ -1,0 +1,71 @@
+:root {
+    --about-desc-color: #6f755f;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    visibility: hidden;
+    transform: translateY(50px);
+    animation: about-fade-in 1s 0.3s ease-out forwards;
+    animation-play-state: paused;
+    @media screen and (min-width: 768px) and (max-width: 991.98px) {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    @media screen and (max-width: 767.98px) {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    &__title {
+        @include title-section;
+    }
+    &__wrap {
+        width: 100%;
+        flex: 1 1 calc(50% - 80px);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        animation: about-slide-in-text 1s 0.5s ease-in-out forwards;
+        animation-play-state: paused;
+        transform: translateX(-50px);
+        visibility: hidden;
+    }
+    &__desc {
+        @include desc-secondary;
+        font-weight: 300;
+        color: var(--about-desc-color);
+    }
+    &__figure {
+        width: 100%;
+        flex: 1 1 calc(50% - 80px);
+        isolation: isolate;
+        aspect-ratio: 1 / 1;
+        visibility: hidden;
+        transform: translateX(-50px);
+        animation: about-slide-in-image 1s 0.3s ease-out forwards;
+    }
+}
+
+@keyframes about-fade-in {
+    to {
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@keyframes about-slide-in-text {
+    to {
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+@keyframes about-slide-in-image {
+    to {
+        visibility: visible;
+        transform: translateX(0);
+    }
+}

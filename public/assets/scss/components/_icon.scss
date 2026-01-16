@@ -1,0 +1,113 @@
+:root {
+    --icon-primary-bg-color: #e2ebd3;
+    --icon-primary-border-color: #2d5551;
+
+    --icon-secondary-bg-color: #2d5551;
+}
+
+@mixin icon {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.icon {
+    @include icon;
+    &.drop-up {
+        background: url(../img/drop-up.svg) no-repeat 50% 50% / contain;
+    }
+    &.twitter {
+        background: url(../img/twitter.svg) no-repeat 50% 50% / contain;
+    }
+    &.youtube {
+        background: url(../img/youtube.svg) no-repeat 50% 50% / contain;
+    }
+    &.telegram {
+        background: url(../img/telegram.svg) no-repeat 50% 50% / contain;
+    }
+    &.whatsapp {
+        background: url(../img/whatsapp.svg) no-repeat 50% 50% / contain;
+    }
+    &.solar-energy {
+        background: url(../img/solar-energy.svg) no-repeat 50% 50% / contain;
+    }
+    &.wind-turbine {
+        background: url(../img/wind-turbine.svg) no-repeat 50% 50% / contain;
+    }
+    &.electric-vehicles {
+        background: url(../img/electric-vehicles.svg) no-repeat 50% 50% / contain;
+    }
+    &.charging-stations {
+        background: url(../img/charging-stations.svg) no-repeat 50% 50% / contain;
+    }
+    &.portfolio {
+        background: url(../img/portfolio.svg) no-repeat 50% 50% / contain;
+    }
+    &.energy {
+        background: url(../img/energy.svg) no-repeat 50% 50% / contain;
+    }
+    &.charity {
+        background: url(../img/charity.svg) no-repeat 50% 50% / contain;
+    }
+}
+
+@mixin icon-primary {
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    height: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    background-color: var(--icon-primary-bg-color);
+    border: 1.5px solid var(--icon-primary-border-color);
+    border-radius: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 767.98px) {
+        width: 40px;
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+        border-radius: 80px;
+    }
+}
+
+@mixin icon-secondary {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    height: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--icon-secondary-bg-color);
+    isolation: isolate;
+    aspect-ratio: 1 / 1;
+    clip-path: polygon(
+        0% 10px,
+        10px 0%,
+        calc(100% - 10px) 0%,
+        100% 10px,
+        100% calc(100% - 10px),
+        calc(100% - 10px) 100%,
+        10px 100%,
+        0% calc(100% - 10px)
+    );
+    @media screen and (max-width: 767.98px) {
+        width: 40px;
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+    }
+}
