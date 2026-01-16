@@ -49,12 +49,20 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
+    </noscript>
     <link
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
     <!-- Preloading -->
-    <link rel="preload" as="image" href="/assets/img/img_1-320.webp" type="image/webp" fetchpriority="high">
+    <!-- <link rel="preload" as="image" href="assets/img/img_1-320.webp" type="image/webp" fetchpriority="high"> -->
 
     <!-- Style -->
     <link rel="preload" href="assets/css/style.min.css?v=1.0.0" as="style">
@@ -121,8 +129,9 @@
 
             <aside class="promo__footer" aria-label="Featured project">
                 <img class="promo__footer--bg" src="assets/img/img_1.webp"
-                    srcset="assets/img/img_1-256.webp 256w, assets/img/img_1-320.webp 320w, assets/img/img_1-512.webp 512w, assets/img/img_1-768.webp 768w, assets/img/img_1.webp 100vw"
-                    alt="" width="1024" height="440" loading="eager" fetchpriority="high" decoding="async">
+                    srcset="assets/img/img_1-256.webp 256w, assets/img/img_1-320.webp 320w, assets/img/img_1-512.webp 512w, assets/img/img_1-768.webp 768w, assets/img/img_1.webp 1024w"
+                    sizes="213px" alt="" width="1024" height="440" loading="eager" fetchpriority="high"
+                    decoding="async">
 
                 <div class="promo__footer--header">
                     <p class="promo__footer--count" aria-label="Slide 1">01</p>
