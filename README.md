@@ -96,5 +96,5 @@ Performance optimization was carried out as part of the front-end delivery proce
 ---
 
 ### 🎯 JSON reports
-- [Before JSON](./media/json/before.json)
-- [After JSON](./media/json/after.json)
+- [Before JSON](./media/index-before.json)
+- [After JSON](./media/index-after.json)
